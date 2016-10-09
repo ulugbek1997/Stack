@@ -16,7 +16,7 @@ Stack::Stack(){
 void Stack::init(){
     top = -1;
     counter = 0;
-    arrayOfInt = new int[counter];
+    arrayOfInt = new int[counter + 1];
     std::cout<<"The stack has initialized"<<std::endl;
 }
 
