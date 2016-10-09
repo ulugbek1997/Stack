@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
     std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
     
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-    cout << "The pushing time is: " << duration << endl;
+    cout << "The inserting time is: " << duration << endl;
     
     
     t1 = std::chrono::high_resolution_clock::now();
@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
         myStack.pop();
     t2 = std::chrono::high_resolution_clock::now();
     duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-    cout << "The popping time is: " << duration << endl;
+    cout << "The deleting time is: " << duration << endl;
 
     return 0;
 }
