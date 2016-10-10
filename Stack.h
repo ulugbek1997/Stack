@@ -11,18 +11,17 @@
 
 class Stack{
 private:
-    int top, counter;
+    int top, counter, size;
     int* arrayOfInt;
     
 public:
     Stack();
-    void init();
+    void init(int);
     void push(int);
     int pop();
     bool isFull();
     bool isEmpty();
     int getCounter();
-    void show();
 };
 
 #endif /* Stack_h */

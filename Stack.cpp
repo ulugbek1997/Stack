@@ -13,36 +13,26 @@ Stack::Stack(){
     std::cout<<"The stack has created"<<std::endl;
 }
 
-void Stack::init(){
+void Stack::init(int size){
+    this->size = size;
     top = -1;
     counter = 0;
-    arrayOfInt = new int[counter + 1];
+    arrayOfInt = new int[size];
     std::cout<<"The stack has initialized"<<std::endl;
 }
 
 void Stack::push(int element){
-    if (isFull()){
-        int *tempArray = new int[counter + 1];
-        for (int i = 0; i < counter; i++){
-            tempArray[i] = pop();
-        }
-        delete [] arrayOfInt;
-        arrayOfInt = new int[counter+1];
-        for (int i = 0; i < counter; i++){
-            arrayOfInt[i] = pop();
-        }
-        
-        arrayOfInt[++top] = element;
+    if(isFull()){
+        std::cout<<"The stack is full"<<std::endl;
+        exit(1);
     }
-    
-    else{
+    else
         arrayOfInt[++top] = element;
-    }
     counter++;
 }
 
 int Stack::pop(){
-    if(isEmpty()){
+    if (isEmpty()){
         std::cout<<"The stack is empty"<<std::endl;
         exit(1);
     }
@@ -53,7 +43,7 @@ int Stack::pop(){
 }
 
 bool Stack::isFull(){
-    if (counter == (top))
+    if (counter == size)
         return true;
     else
         return false;
@@ -69,13 +59,6 @@ bool Stack::isEmpty(){
 int Stack::getCounter(){
     return counter;
 }
-
-void Stack::show(){
-    for (int i = 0; i < counter; i++)
-        std::cout<<arrayOfInt[i]<<" ";
-}
-
-
 
 
 
