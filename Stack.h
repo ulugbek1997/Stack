@@ -15,13 +15,13 @@ private:
     int* arrayOfInt;
     
 public:
-    Stack();
-    void init(int);
-    void push(int);
-    int pop();
-    bool isFull();
-    bool isEmpty();
-    int getCounter();
+    Stack(); // Constructor to create an object
+    void init(int); // Initializing method
+    void push(int); // Pushing method
+    int pop(); //Removing method
+    bool isFull(); // Full stack or not
+    bool isEmpty(); // Empty stack or not
+    int getCounter(); // How many element contains stack
 };
 
 #endif /* Stack_h */

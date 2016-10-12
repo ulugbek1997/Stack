@@ -50,7 +50,7 @@ bool Stack::isFull(){
 }
 
 bool Stack::isEmpty(){
-    if (top == -1)
+    if (counter == 0)
         return true;
     else
         return false;
